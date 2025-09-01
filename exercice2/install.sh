@@ -2,5 +2,5 @@
 
 mkdir -p ~/bin ~/cegep ~/projets
 
-sudo pacman -Syu --noconfirm git vim gbd python python-pip
+sudo pacman -S git vim gbd gcc python3 python-pip
 
