@@ -10,15 +10,22 @@ echo "Bienvenue $USER !"
 
 #les alias
 
-alias ls='ls -a'
+alias ls='ls -a --color=auto'
 alias ll='ls -al'
 alias c='clear'
-alias grepc='grep --color=Red'
-
-
-alias ls='ls --color=auto'
-
+alias grepc='grep --color=always'
 alias grep='grep --color=auto'
+
+#copier dotfile
+
+cp -r .bashrc ~/
+cp -r .gitconfig ~/
+cp -r install.sh ~/
+
+cp -r .bashrc ~/.config
+cp -r.gitconfig ~/.config
+cp -r install.sh~/.config
+
 PS1='[\u@\h \W]\$ '
 
 #Creer un fichier et ouvrir avec Vim
@@ -34,15 +41,10 @@ create_file(){
 
 #Recherche insensible a la casse avec grep
 grep_icase(){
-	if [ -z "$1" ] || [ -z "$2" ]; then
-	  echo "Usage: grep_icase <motif> <fichier>"
-	  return 1
-	fi
-        grep -i "$1" "$2"
+	command grep -i "$@"
 }
 
 #Personnalisation du prompt
-#Affiche uniquement le chemin courant et le $
 PS1='\w\$ '
 
 export PATH="$HOME/bin:$PATH"
