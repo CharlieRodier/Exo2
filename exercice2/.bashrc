@@ -16,15 +16,7 @@ alias c='clear'
 alias grepc='grep --color=always'
 alias grep='grep --color=auto'
 
-#copier dotfile
 
-cp -r .bashrc ~/
-cp -r .gitconfig ~/
-cp -r install.sh ~/
-
-cp -r .bashrc ~/.config
-cp -r.gitconfig ~/.config
-cp -r install.sh~/.config
 
 PS1='[\u@\h \W]\$ '
 
