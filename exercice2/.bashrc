@@ -31,7 +31,7 @@ PS1='[\u@\h \W]\$ '
 #Creer un fichier et ouvrir avec Vim
 create_file(){
 	if [ -z "$1" ]; then
-	  echo "Erreur: Veuillez fournir un chemin de fichier."
+	  echo "Erreur: Veuillez saisir un nom de fichier."
 	  return 1
 	fi
         mkdir -p "$(dirname "$1")"
@@ -49,4 +49,17 @@ PS1='\w\$ '
 
 export PATH="$HOME/bin:$PATH"
 
+#Personnalisation - etape bonus
+alias gst='git status'
+alias gcm='git commit -m'
+alias gad='git add .'
+alias gp='git push'
+
+#fonction pour creer un fichier et y acceder
+mkdircd()
+{
+ mkdir -p "$1" && cd "$1"
+}
+
+export NOM='Charlie'
 
